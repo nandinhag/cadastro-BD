@@ -1,0 +1,53 @@
+<?php
+require_once 'classe-pessoa.php';
+$p = new Pessoa("crudpdo","localhost","root","");
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>C a d a s t r o !</title>
+</head>
+<body>
+    <section id="esquerda">
+    <form action="cadastro.php" method="POST">
+        <fieldset>
+   <center>
+        <h2>CADASTRAR PESSOAS</h2> <br>
+       <label> Nome:</label>  <br>
+        <input type="text" name="caixnome" required><br>
+        <label for="">Telefone:</label> <br>
+        <input type="text" name="caixtel"required> <br>
+    <label> E-mail: </label> <br>
+        <input type="text" name="caixemail n" required> <br>
+        <input type="submit" value="Cadastrar" class="buttom">
+    </center>
+</fieldset>
+     </form>
+    </section>
+        <br> 
+    <section id="direita">
+        <?php
+        $dados = $p -> buscarDados();
+        echo "<pre>"
+        var_dump
+<table  name="Tabela">
+    <tr id="titulo"> <td>NOME</td>
+    <td>TELEFONE</td>
+    <td colspan="2">E-MAIL</td>
+    </tr>
+    <tr>
+ <td>Nanxa</td>
+ <td>324-421</td>
+ <td>nandacosta@hotmail.com</td>
+ <td ><a href=""> Editar </a> <a href=""> Excluir </a> </td>
+</tr>
+</table>
+
+</section>
+
+</body>
+</html>
